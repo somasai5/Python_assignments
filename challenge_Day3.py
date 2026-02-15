@@ -1,44 +1,47 @@
 # Student performance analyzer
-n = int(input("Enter the no. of students: "))
-studentMarks = []
-studentRegistrationNumbers = []
+registrationNumber = int(input("Enter your registration number: "))
+activityScores = []
+n = int(input("Enter number of activities: "))
+print("Enter activities: ")
 for i in range(n):
-    regNo = input(f"Enter registration number of student {i+1}: ").strip()
-    marks = float(input(f"Enter marks of student {i+1}: "))
-    studentMarks += [marks]
-    studentRegistrationNumbers += [regNo]
+    x = int(input())
+    activityScores += [x]
+print('activity Scores :',activityScores)
 
-totalValid = 0
-totalFailed = 0
+low_risk = []
+medium_risk = []
+high_risk = []
+critical_risk = []
 
-print("\nReg No : Marks : Category")
-print("--------------------------")
 
-for i in range(n):
-    if(int(studentRegistrationNumbers[i][-1])>5):
-        if(studentMarks[i]<=39 and studentMarks[i]>=0):
-            studentMarks[i]+=10
-        elif(studentMarks[i]<=59 and studentMarks[i]>=40):
-            studentMarks[i]+=5
-        elif(studentMarks[i]<=74 and studentMarks[i]>=60):
-            studentMarks[i]+=3
-    if studentMarks[i]>100 or studentMarks[i]<0:
-        print(f"{studentRegistrationNumbers[i]} : {studentMarks[i]} : invalid marks ")
-    elif studentMarks[i] >= 90:
-        print(f"{studentRegistrationNumbers[i]} : {studentMarks[i]} : Excellent ")
-        totalValid += 1
-    elif studentMarks[i]>=75:
-        print(f"{studentRegistrationNumbers[i]} : {studentMarks[i]} : Very Good ")
-        totalValid += 1
-    elif studentMarks[i]>=60:
-        print(f"{studentRegistrationNumbers[i]} : {studentMarks[i]} : Good ")
-        totalValid += 1
-    elif studentMarks[i]>=40:
-        print(f"{studentRegistrationNumbers[i]} : {studentMarks[i]} : Average ")
-        totalValid += 1
-    else :
-        print(f"{studentRegistrationNumbers[i]} : {studentMarks[i]} : Fail ")
-        totalValid += 1
-        totalFailed += 1
-print("total valid students: ", totalValid)
-print("total failed students: ", totalFailed)
+
+for scores in activityScores:
+    if scores>100:
+        critical_risk += [scores]
+    elif scores>60:
+        high_risk += [scores]
+    elif scores>30:
+        medium_risk += [scores]
+    elif scores>0:
+        low_risk += [scores]
+    else:
+
+
+print("\nlow risk :",low_risk)
+print("medium risk :",medium_risk)
+print("high risk :",high_risk)
+print("critical risk :",critical_risk)
+
+
+if(registrationNumber%3 == 0):
+    personalization = len(low_risk)
+    low_risk = []
+else:
+    personalization = len(critical_risk)
+    critical_risk = []
+
+print("\n After personalization :")
+print("low risk :",low_risk)
+print("medium risk :",medium_risk)
+print("high risk :",high_risk)
+print("critical risk :",critical_risk)
