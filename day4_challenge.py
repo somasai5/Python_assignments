@@ -12,23 +12,15 @@ medium_risk = []
 high_risk = []
 critical_risk = []
 
-totalValid=0
-totalIgnored=0
-personalization=0
 
 for scores in activityScores:
     if scores>100:
         critical_risk += [scores]
-        totalValid = totalValid + 1
     elif scores>60:
         high_risk += [scores]
-        totalValid = totalValid + 1
-    elif scores>30:
         medium_risk += [scores]
-        totalValid = totalValid + 1
     elif scores>0:
         low_risk += [scores]
-        totalValid = totalValid + 1
     else:
         totalIgnored += 1
 
@@ -36,24 +28,5 @@ print("\nlow risk :",low_risk)
 print("medium risk :",medium_risk)
 print("high risk :",high_risk)
 print("critical risk :",critical_risk)
-
-
-if(registrationNumber%3 == 0):
-    personalization = len(low_risk)
-    low_risk = []
-else:
-    personalization = len(critical_risk)
-    critical_risk = []
-
-print("\n After personalization :")
-print("low risk :",low_risk)
-print("medium risk :",medium_risk)
-print("high risk :",high_risk)
-print("critical risk :",critical_risk)
-
-print("\nTotal valid :",totalValid)
-print("Total ignored :",totalIgnored)
-print("Total personalization :",personalization)
-
 
 
