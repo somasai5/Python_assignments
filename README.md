@@ -43,8 +43,47 @@ The main purpose of this project is to practice string validation, conditional l
 The program prints whether the student profile is APPROVED OR REJECTED based on the validation conditions.
 
 
+## Student Performance Analyzer 
 
-## Student Performance Analyzer
+### Description
+This project evaluates the performance of multiple students 
+
+### Purpose
+The purpose of this project is to practice lists, loops, conditional logic, indexing etc
+
+### How the Code Works
+- First program asks for  number of students.
+- It stakes each student’s registration number and marks.
+- Bonus marks are added depending on the last digit of the registration number.
+- if last digit of the registration is greater than 5
+- Each students are categorized according to the classification ruless
+- The program counts total valid students and total failed students also  and print it
+
+### Personalization
+If the last digit of the registration number is greater than 5:
+- 0–39 → +10 marks
+- 40–59 → +5 marks
+- 60–74 → +3 marks
+
+### Performance Classification
+- 90–100 → Excellent
+- 75–89 → Very Good
+- 60–74 → Good
+- 40–59 → Average
+- 0–39 → Fail
+- Outside 0–100 → Invalid marks
+
+
+### Output
+The program displays:
+- Registration number
+- Final marks after increasing marks
+- Performance category
+- Total valid students
+- Total failed students
+
+
+## Cyber Activity Risk Analyzer
 
 ### Description
 This program analysis the student performace
