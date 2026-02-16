@@ -41,3 +41,45 @@ The main purpose of this project is to practice string validation, conditional l
 
 ### Output
 The program prints whether the student profile is APPROVED OR REJECTED based on the validation conditions.
+
+
+
+## Student Performance Analyzer
+
+### Description
+This program analysis the student performace
+It classifies activity scores into different risk levels and also we will applying the personalization rules.
+
+### Purpose
+The purpose of this project is to practice using of lists loops, conditional statements etc
+
+### How the Code Works
+- The program asks for a student registration number.
+- It takes activity scores as input.
+- Each score is categorised into risk group based on the conditions
+- Negative values are considered as invalid and we will be ignoring those values
+- A personalization rule is applied  depending on the registration number.
+- if the registration number is divided by 3 then i will removing th lowrisk values
+- parallely i will be counting no.of totalValid scores are there and no.of ignored scores and also we will be counting no.of scores are removed due to personalization
+- The program prints final categorized result.
+
+### Risk Classification Range
+- Critical risk: score > 100
+- High risk: 61 – 100
+- Medium risk: 31 – 60
+- Low risk: 1 – 30
+- Ignored: ≤ 0
+
+### Personalization Rule
+- If registration number is divisible by 3  low risk scores are removed
+- Else → critical risk scores are removed
+
+
+### Output
+The program displays:
+- Risk category lists
+- After applying personalization list
+- Total valid scores
+- Total ignored scores
+- Number of scores removed due to personalization
+
